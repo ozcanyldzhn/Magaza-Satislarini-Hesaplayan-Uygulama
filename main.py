@@ -9,3 +9,12 @@ class Magaza:
 
     def set_magaza_adi(self, magaza_adi):
         self.__magaza_adi = magaza_adi
+        
+    def ekle_satis(self, satici_adi, satici_cinsi, tutar):
+        if satici_adi not in self.__satislar:
+            self.__satislar[satici_adi] = {satici_cinsi: tutar}
+        else:
+            if satici_cinsi in self.__satislar[satici_adi]:
+                self.__satislar[satici_adi][satici_cinsi] += tutar
+            else:
+                self.__satislar[satici_adi][satici_cinsi] = tutar
