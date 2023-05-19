@@ -34,3 +34,9 @@ class Magaza:
         sonuc += f"{self.__magaza_adi} mağazasının toplam satış tutarı: {self.get_toplam_satis_tutari()} TL'dir.\n"
         return sonuc
 
+def main():
+    magazalar = {}
+    while True:
+        magaza_adi = input("Mağaza adını girin (Çıkmak için e Harfine basınız.):")
+        if magaza_adi == "e":
+            break
