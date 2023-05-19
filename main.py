@@ -40,3 +40,13 @@ def main():
         magaza_adi = input("Mağaza adını girin (Çıkmak için e Harfine basınız.):")
         if magaza_adi == "e":
             break
+        satici_adi = input("Satıcının adını girin:")
+        satici_cinsi = input("Satıcının eşyasını girin(Tv,bilgisayar vb.):")
+        tutar = float(input("Satış tutarını girin:"))
+        if magaza_adi not in magazalar:
+            magazalar[magaza_adi] = Magaza(magaza_adi, satici_adi, satici_cinsi)
+        magazalar[magaza_adi].ekle_satis(satici_adi, satici_cinsi, tutar)
+
+    for magaza in magazalar.values():
+        print(magaza)
+main()
